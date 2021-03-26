@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Switch Payment Gateway</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="modalBtn" class="button">Click Here</button>
+
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            
+                <div class="modal-header">
+                    
+                    <div class="modal-header-sub">
+                        <div class="brand-icon">
+                            <img src="images/logo.png" alt="logo" class="logo">
+                        </div>
+                        <div class="payment-details">
+                            <p>youremail@mail.com <br>
+                            Pay <span class="price"> N25,000 </span> </p>
+                        </div>
+                    </div>
+                    <h4>PAY WITH</h4>
+                </div>
+           
+
+            <!--Modal Navigation-->
+
+            <div class="tabContainer">
+                <div class="buttonContainer">
+                    <button onclick="showPanel(0,'#2ECC71')"><i class="fas fa-credit-card"></i> Card</button>
+                    <button onclick="showPanel(1,'#2ECC71')"><i class="fas fa-university"></i> Bank</button>
+                    <button onclick="showPanel(2,'#2ECC71')"><i class="fas fa-random"></i> Transfer</button>
+                    <button onclick="showPanel(3,'#2ECC71')"><i class="far fa-building"></i> USSD</button>
+                    <button onclick="showPanel(4,'#2ECC71')"><i class="fas fa-qrcode"></i> VISA QR</button>
+
+                </div>
+                <div class="tabPanel">
+                    <div class="modal-body">
+                        <div class="form">
+                            <form action="" method="POST" id="card-form">
+                                <label for="email" class="control-label">Email</label> <br>
+                                <input name="email" type="email" class="form-control" placeholder="yourmail@mail.com" required> <br>
+
+                                <label for="name" class="control-label">Name on Card</label> <br>
+                                <input name="name" type="text" class="form-control" placeholder="John Doe" required> <br>
+
+                                <label for="email" class="control-label">Card Number</label> <br>
+                                <input name="card-number" type="number" class="form-control" placeholder="1234 1234 1234 1234" required> <br>
+
+
+                                    <div class="date-field">
+                                        <label for="date" class="control-label">Valid Through</label> <br>
+                                        <input name="date" type="text" class="form-control date-field" placeholder="MM/YY" required> <br>
+                                    </div>
+
+                                    <div class="cvc-field">
+                                        <label for="cvc" class="control-label">CVC</label> <br>
+                                        <input name="cvc" type="password" class="form-control cvc-field" placeholder="123" required> <br>
+                                    </div>
+
+
+                                <input type="submit" class="form-control submit" value="SECURE PAY N25,000">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabPanel">
+                    <div class="modal-body">
+                        <div class="form">
+                            <form action="" method="POST" id="card-form">
+                                <label for="bank-type" class="control-label">Select Your Bank</label> <br>
+                                <select name="bank-type" id="bank" class="form-control">
+                                    <option value="bank">Click here to choose</option>
+                                    <option value="access">Access Bank</option>
+                                    <option value="uba">UBA</option>
+                                    <option value="zenith">Zenith Bank</option>
+                                </select> <br>
+
+                                <div class="detail-float">
+                                    <div class="account-field">
+                                        <label for="account-number" class="control-label">Enter Account Number</label> <br>
+                                        <input name="account-number" type="number" class="form-control account-number" placeholder="10 Digits Account Number" required> <br>
+                                    </div>
+                                    
+                                    <div class="btn-verify">
+                                        <input type="button" class="form-control submit" value="Verify"> <br>
+                                    </div> 
+                                </div>
+
+                                <label for="token" class="control-label">Enter Token Sent to Phone</label> <br>
+                                <input name="token" type="number" class="form-control" placeholder="123456" required> <br>
+
+                                
+                                <input type="submit" class="form-control submit" value="Authenticate">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabPanel">
+                    <div class="modal-body">
+                        <div class="no-form-tab">
+                            <div class="no-form-tab-content">
+                                <p>Transfer <span>N25,000</span> to the Account provided below</p>
+                                <p>Access Bank <br> <span> 0023456789 </span></p>                                
+                            </div>
+                            <hr>
+                            <div class="no-form-tab-content">
+                                <p>This account is only available for this transaction, <br> and will expire in <span> 30 minutes</span>.</p>
+                            </div>
+                        </div>
+                        <form action="" class="no-form">
+                            <input type="button" class="form-control submit" value="Verify Money Sent">
+                        </form>
+                        
+                    </div>
+                </div>
+                <div class="tabPanel">
+                    <div class="modal-body">
+                        <p>Tab 4 Modal</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse totam, corrupti fugit quasi explicabo ullam accusamus nam laboriosam excepturi alias animi impedit amet, reprehenderit praesentium repellendus! Autem consequuntur eligendi natus!</p>
+                    </div>
+                </div>
+                <div class="tabPanel">
+                    <div class="modal-body">
+                        <p>Tab 5 Modal</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse totam, corrupti fugit quasi explicabo ullam accusamus nam laboriosam excepturi alias animi impedit amet, reprehenderit praesentium repellendus! Autem consequuntur eligendi natus!</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
